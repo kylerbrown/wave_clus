@@ -1,7 +1,7 @@
 function y = fix_filter(x)
 % fix_filter (in case signal processing toolbox is not available).
 % filters data x with an eliptic passband between [300 3000] Hz.
-
+warning('missing signal processing toolbox!')
 a = [1.0000 -2.3930  2.0859 -0.9413 0.2502];
 b = [0.1966 -0.0167 -0.3598 -0.0167 0.1966];
 

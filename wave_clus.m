@@ -90,7 +90,7 @@ set(handles.fix3_button,'value',0);
 % Update handles structure
 guidata(hObject, handles);
 
-% UIWAIT makes wave_clus wait for user response (see UIRESUME)
+% UIWAIT makes wave_cluswait for user response (see UIRESUME)
 % uiwait(handles.figure1);
 
 
@@ -115,7 +115,7 @@ set(0,'DefaultAxesColorOrder',clus_colors)
 % --- Executes on button press in load_data_button.
 function load_data_button_Callback(hObject, eventdata, handles)
 % select file
-[filename, pathname] = uigetfile('*.*','Select file'); % Use only the supported extensions can bring case-sensitive related problems.
+[filename, pathname] = uigetfile('*.mat','Select file'); % Use only the supported extensions can bring case-sensitive related problems.
 
 % if any file was selected, cancel the loading
 if ~ischar(pathname)

@@ -20,8 +20,8 @@ fmax_sort = par.sort_fmax;
 
 %HIGH-PASS FILTER OF THE DATA
 if exist('ellip','file')                         %Checks for the signal processing toolbox
-    [b_detect,a_detect] = ellip(par.detect_order,0.1,40,[fmin_detect fmax_detect]*2/sr);
-    [b,a] = ellip(par.sort_order,0.1,40,[fmin_sort fmax_sort]*2/sr);
+    [b_detect,a_detect] = butter(par.detect_order,[fmin_detect fmax_detect]*2/sr);
+    [b,a] = butter(par.sort_order,[fmin_sort fmax_sort]*2/sr);
 %     [z_det,p_det,k_det] = ellip(par.detect_order,0.1,40,[fmin_detect fmax_detect]*2/sr);
 %     [z,p,k] = ellip(par.sort_order,0.1,40,[fmin_sort fmax_sort]*2/sr);
 %     

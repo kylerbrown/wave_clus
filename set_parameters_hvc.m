@@ -31,24 +31,25 @@ par.temp_plot = 'log';               % temperature plot in log scale
 par.tmax = 'all';                    % maximum time to load 
 %par.tmax= 180;                      % maximum time to load (in sec) 
 par.tmin= 0;                         % starting time for loading (in sec) 
-par.w_pre = 12;                      % number of pre-event data points stored (default 20) 
-par.w_post = 18;                     % number of post-event data points stored (default 44)) 
+par.w_pre = 10;                      % number of pre-event data points stored (default 20) 
+par.w_post = 15;                     % number of post-event data points stored (default 44)) 
 par.alignment_window = 10;           % number of points around the sample expected to be the maximum 
-par.stdmin = 6;                      % minimum threshold for detection 
-par.stdmax = 60;                     % maximum threshold for detection 
-par.detect_fmin = 100;               % high pass filter for detection 
+par.stdmin = 5.5;                      % minimum threshold for detection 
+par.stdmax = 40;                     % maximum threshold for detection 
+par.detect_fmin = 400;               % high pass filter for detection 
 par.detect_fmax = 2000;              % low pass filter for detection (default 1000) 
 par.detect_order = 3;                % filter order for detection 
-par.sort_fmin = 100;                 % high pass filter for sorting 
+par.sort_fmin = 10;                 % high pass filter for sorting 
 par.sort_fmax = 12000;                % low pass filter for sorting (default 3000) 
 par.sort_order = 1;                  % filter order for sorting 
 par.ref_ms = .3;                      % detector dead time, minimum refractory period (in ms) 
 %par.detection = 'pos';               % type of threshold 
+%par.detection = 'neg'; 
 par.detection = 'neg' 
 %par.detection = 'both'; 
  
 % INTERPOLATION PARAMETERS 
-par.int_factor = 1;                  % interpolation factor 
+par.int_factor = 3;                  % interpolation factor 
 par.interpolation = 'y';             % interpolation with cubic splines (default) 
 % par.interpolation = 'n'; 
  
@@ -80,21 +81,6 @@ par.permut = 'y';                   % for selection of random 'par.max_spk' spik
 % HISTOGRAM PARAMETERS 
 par.nbins = 100;                    % # of bins for the ISI histograms 
 par.bin_step = 1;                   % percentage number of bins to plot 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
  
  
  
